@@ -1,0 +1,98 @@
+/* ---------- COLOR THEME ---------- */
+:root {
+    --bg: #F3FAF6;
+    --card: #FFFFFF;
+    --primary: #2E7D32;
+    --secondary: #81C784;
+    --text: #1E2A24;
+    --border: #CFE8D8;
+}
+
+/* ---------- DARK MODE ---------- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0E1913;
+        --card: #16261D;
+        --primary: #66BB6A;
+        --secondary: #4CAF50;
+        --text: #E8F5EE;
+        --border: #2E4A3A;
+    }
+}
+
+/* ---------- BASE ---------- */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    padding: 30px 15px;
+}
+
+/* ---------- HEADER ---------- */
+h1 {
+    text-align: center;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--secondary);
+    margin-bottom: 30px;
+}
+
+/* ---------- LAYOUT ---------- */
+.dashboard {
+    max-width: 900px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+/* ---------- CARDS ---------- */
+.card {
+    background-color: var(--card);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.card p {
+    line-height: 1.6;
+}
+
+/* ---------- PLACEHOLDERS ---------- */
+.placeholder {
+    border: 2px dashed var(--border);
+    background: transparent;
+    box-shadow: none;
+    opacity: 0.85;
+}
+
+/* ---------- ACTION BUTTON ---------- */
+.cta {
+    display: block;
+    margin: 40px auto 0;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(135deg, var(--secondary), var(--secondary));
+    color: #126816;
+    cursor: pointer;
+}
+
+.cta:hover {
+    opacity: 0.95;
+}

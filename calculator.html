@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Soil Lime Requirement Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calculator">
+    <h2>Lime Requirement Calculator</h2>
+
+    <label for="currentPH">Current Soil pH</label>
+    <input type="number" step="0.1" id="currentPH">
+
+    <label for="targetPH">Target Soil pH</label>
+    <input type="number" step="0.1" id="targetPH">
+
+    <label for="soilType">Soil Type</label>
+    <select id="soilType">
+        <option value="">Select soil type</option>
+        <option value="2">Sandy</option>
+        <option value="3.5">Loam</option>
+        <option value="5">Clay</option>
+    </select>
+
+    <label for="cce">Lime CCE (%)</label>
+    <input type="number" id="cce" value="100">
+
+    <button onclick="calculateLime()">Calculate Lime</button>
+
+    <a href="index.html"><button>back</button></a>
+
+    <div class="result hidden" id="result"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
